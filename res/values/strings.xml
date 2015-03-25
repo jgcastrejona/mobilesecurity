@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MobileSecurity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="UserStr">Usuario</string>
+    <string name="PassStr">Contraseña</string>
+    <string name="OKLogin">Ingresar</string>
+    <string name="title_activity_start">StartActivity</string>
+    <string name="title_activity_report">ReportActivity</string>
+    <string name="titleReporte">Titulo</string>
+    <string name="descReporte">Descripcion</string>
+    <string name="latReporte">Latitud</string>
+    <string name="longcReporte">Longitud</string>
+    <string name="tipoReporte">Tipo</string>   
+    <string name="btnReporte">Enviar reporte</string> 
+    <string name="btnLevantar">Levantar un reporte</string>
+</resources>

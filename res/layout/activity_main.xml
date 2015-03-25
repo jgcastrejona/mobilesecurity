@@ -1,0 +1,76 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bglogin"
+    android:gravity="top|center"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:cropToPadding="true"
+        android:paddingTop="0dp"
+        android:src="@drawable/logo_msecurity_shadp" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imageView1"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="@string/UserStr"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/Blanco" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtUsr"
+        android:layout_centerHorizontal="true"
+        android:text="@string/PassStr"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/Blanco" />
+
+    <EditText
+        android:id="@+id/txtUsr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView1"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:gravity="center" />
+
+    <EditText
+        android:id="@+id/txtPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtUsr"
+        android:layout_below="@+id/textView2"
+        android:layout_marginTop="17dp"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/btnLog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="29dp"
+        android:background="@color/AzulCl"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="@string/OKLogin"
+        android:textColor="@color/Blanco"
+        android:textColorHint="@color/Blanco"
+        android:textColorLink="@color/Blanco"
+        android:textStyle="bold" />
+
+</RelativeLayout>
