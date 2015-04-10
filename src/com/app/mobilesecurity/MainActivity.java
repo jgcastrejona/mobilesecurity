@@ -1,6 +1,7 @@
+/*MainActivity.java: esta clase es el punto de partida de la aplicación cliente de MobileSecurity
+ * Su vista, layout o interfaz gráfica corresponde a la pantalla de login del cliente. 
+ * */
 package com.app.mobilesecurity;
-
-
 
 import android.app.Activity;
 import android.app.ProgressDialog;
@@ -16,7 +17,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 import java.util.concurrent.ExecutionException;
-
+/*MainActivity extiende de la clase Activity propia del SDK de Android, encargada de el manejo de 
+ * aplicaciones en entornos Android*/
 public class MainActivity extends Activity {
 
 	@Override
@@ -67,9 +69,10 @@ public class MainActivity extends Activity {
 				try {
 					String dum = task.get().toString();
 					if(task.bandera == false){
+						Toast.makeText(getApplicationContext(), dum, Toast.LENGTH_LONG).show();
 						Intent intent = new Intent(MainActivity.this, StartActivity.class);
+						intent.putExtra("enviadoPor", dum.toString());
 						startActivity(intent);
-						
 						finish();
 					}
 					else{

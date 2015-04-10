@@ -86,8 +86,8 @@ public class AsyncTaskParser extends AsyncTask<String, String, String> {
 			is.close();    /*Cerramos el flujo de entrada*/
 			result = sb.toString();  /*Convertirmos el resultado de la construcción de la cadena con el método toString */
 			JSONObject json = new JSONObject(result); /* Convertimos result a un objeto JSON*/
-			String mesErr = json.getString("err"); /*Buscamos dentro del objeto JSON la clave "err" y la asignamos a una cadena*/
-			if(mesErr.contains("Password o usuario invalidos")){ /*Si la cadena coincide con la indicada en el método contains*/
+			String mesErr = json.getString("type"); /*Buscamos dentro del objeto JSON la clave "err" y la asignamos a una cadena*/
+			if(mesErr.contains("warning")){ /*Si la cadena coincide con la indicada en el método contains*/
 				bandera = true; /*Asignamos el valor true a una bandera, misma que será parte del resultado al ejecutar la tarea asíncrona*/
 				return result;  /* Ademas devolvemos el resultado como cadena para poder operar sobre él donde se requiera de forma posterior al login*/
 			}

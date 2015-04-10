@@ -93,12 +93,12 @@
         android:layout_marginTop="18dp"
         android:text="@string/tipoReporte" />
 
-    <EditText
-        android:id="@+id/editText5"
+    <Spinner
+        android:id="@+id/spinner1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/editText4"
         android:layout_below="@+id/textView5"
-        android:ems="10" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="28dp" />
 
 </RelativeLayout>

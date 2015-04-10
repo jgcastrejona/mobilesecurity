@@ -27,10 +27,10 @@ public final class R {
         public static final int editText2=0x7f070007;
         public static final int editText3=0x7f07000a;
         public static final int editText4=0x7f07000c;
-        public static final int editText5=0x7f07000e;
         public static final int editableTitulo=0x7f070006;
         public static final int imageView1=0x7f070000;
         public static final int sendReporte=0x7f07000b;
+        public static final int spinner1=0x7f07000e;
         public static final int textView1=0x7f070001;
         public static final int textView2=0x7f070002;
         public static final int textView3=0x7f070008;

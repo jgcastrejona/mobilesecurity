@@ -1,5 +1,7 @@
 package com.app.mobilesecurity;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.ExecutionException;
 
 import android.app.Activity;
@@ -12,8 +14,10 @@ import android.text.Editable;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 public class ReportActivity extends Activity implements LocationListener {
@@ -68,14 +72,27 @@ public class ReportActivity extends Activity implements LocationListener {
 			}	
 		});
 		
-		final EditText txtTipo = (EditText)findViewById(R.id.editText5);
+		/*final EditText txtTipo = (EditText)findViewById(R.id.editText5);
 		txtTipo.setOnClickListener(new EditText.OnClickListener(){
 			@Override
 			public void onClick(View v) {
 				txtTipo.setText("");
 			}	
-		});
-	
+		});*/
+		
+		final Spinner spinner1 = (Spinner)findViewById(R.id.spinner1);
+		List<String> list= new ArrayList<String>();
+		list.add("Robo/Asalto");
+		list.add("Incendio");		
+		list.add("Accidente peatonal");
+		list.add("Accidente vial");
+		list.add("Emergencia Médica");
+
+		ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item,list);
+		dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		
+		spinner1.setAdapter(dataAdapter);
+		
 		final Button sendReport = (Button)findViewById(R.id.sendReporte);
 		sendReport.setOnClickListener(new Button.OnClickListener(){
 
@@ -86,7 +103,7 @@ public class ReportActivity extends Activity implements LocationListener {
 				Editable edDescr = txtDescripcion.getText();
 				Editable edLatit = txtLatitud.getText();
 				Editable edLongi = txtLongitud.getText();
-				Editable edTipor = txtTipo.getText();
+				String edTipor = String.valueOf(spinner1.getSelectedItem());
 				/*Strings para validar que los datos ya están insertados*/
 				String flgTitle = edTitle.toString();
 				String flgDescr = edDescr.toString();
