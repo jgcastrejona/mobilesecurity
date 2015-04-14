@@ -16,7 +16,7 @@ import android.os.AsyncTask;
 import android.widget.Toast;
 
 public class AsyncTaskReporter extends AsyncTask<String, String, String>{
-
+	String enviadoPor;
 	String titulo;
 	String descripcion;
 	String latitud;
@@ -24,8 +24,9 @@ public class AsyncTaskReporter extends AsyncTask<String, String, String>{
 	String tipo;
 	String serverURL = "http://mobilesecurity.herokuapp.com/reports";
 	
-	public AsyncTaskReporter(String titulo, String descripcion, String latitud, String longitud, String tipo){
+	public AsyncTaskReporter(String enviadoPor, String titulo, String descripcion, String latitud, String longitud, String tipo){
 		super();
+		this.enviadoPor = enviadoPor;
 		this.titulo = titulo;
 		this.descripcion = descripcion;
 		this.latitud = latitud;
@@ -40,6 +41,7 @@ public class AsyncTaskReporter extends AsyncTask<String, String, String>{
 		String reporteOK = "";
 		/*Comienza el parseo JSON para enviar el reporte*/
 		try{
+			sentRep.put("enviadoPor", enviadoPor);
 			sentRep.put("titulo", titulo);
 			sentRep.put("descripcion", descripcion);
 			sentRep.put("latitud", latitud);

@@ -10,6 +10,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class StartActivity extends Activity {
+	String usrDetail;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -19,15 +20,14 @@ public class StartActivity extends Activity {
 		Bundle usrData = getIntent().getExtras();
 		if(usrData != null){
 			/*Obtenemos el valor completo enviado por el activity anterior*/
-			String usrDetail = usrData.getString("enviadoPor");
+			usrDetail = usrData.getString("enviadoPor");
 			Toast.makeText(getApplicationContext(), usrDetail, Toast.LENGTH_LONG).show();
 		}
 	}
 	
-	
-	
 	public void goReporte(View v){
 		Intent i = new Intent(this, ReportActivity.class );
+		i.putExtra("usuario", usrDetail.toString());
 		startActivity(i);
 		
 	}
