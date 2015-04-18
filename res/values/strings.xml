@@ -15,4 +15,5 @@
     <string name="tipoReporte">Tipo</string>   
     <string name="btnReporte">Enviar reporte</string> 
     <string name="btnLevantar">Levantar un reporte</string>
+    <string name="space"> </string>
 </resources>

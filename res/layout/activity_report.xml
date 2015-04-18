@@ -56,6 +56,9 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="18dp"
+        android:background="@color/NaranjaUAP"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
         android:text="@string/btnReporte"
         android:textColor="@color/Blanco" />
 

@@ -67,30 +67,6 @@ public class ReportActivity extends Activity {
 				txtDescripcion.setText("");
 			}	
 		});
-		/*
-		final EditText txtLatitud = (EditText)findViewById(R.id.editText1);
-		txtLatitud.setOnClickListener(new EditText.OnClickListener(){
-			@Override
-			public void onClick(View v) {
-				txtLatitud.setText("");
-			}	
-		});
-		
-		final EditText txtLongitud = (EditText)findViewById(R.id.editText3);
-		txtLongitud.setOnClickListener(new EditText.OnClickListener(){
-			@Override
-			public void onClick(View v) {
-				txtLongitud.setText("");
-			}	
-		});*/
-		
-		/*final EditText txtTipo = (EditText)findViewById(R.id.editText5);
-		txtTipo.setOnClickListener(new EditText.OnClickListener(){
-			@Override
-			public void onClick(View v) {
-				txtTipo.setText("");
-			}	
-		});*/
 		
 		final Spinner spinner1 = (Spinner)findViewById(R.id.spinner1);
 		List<String> list= new ArrayList<String>();

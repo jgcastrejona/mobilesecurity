@@ -69,7 +69,7 @@ public class MainActivity extends Activity {
 				try {
 					String dum = task.get().toString();
 					if(task.bandera == false){
-						Toast.makeText(getApplicationContext(), dum, Toast.LENGTH_LONG).show();
+						//Toast.makeText(getApplicationContext(), dum, Toast.LENGTH_LONG).show();
 						Intent intent = new Intent(MainActivity.this, StartActivity.class);
 						intent.putExtra("enviadoPor", dum.toString());
 						startActivity(intent);

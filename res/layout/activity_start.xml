@@ -16,13 +16,23 @@
         android:textColor="@color/Blanco"
         android:textSize="25sp" />
 
+    <TextView
+        android:id="@+id/showUsr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/welcomeStr"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="29dp"
+        android:text="@string/space"
+        android:textColor="@color/Blanco" />
+
     <Button
         android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="96dp"
+        android:layout_marginBottom="60dp"
         android:background="@color/AzulCl"
         android:onClick="goReporte"
         android:paddingLeft="20dp"
@@ -34,8 +44,19 @@
         android:id="@+id/imageView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
+        android:layout_above="@+id/button1"
+        android:layout_alignLeft="@+id/welcomeStr"
+        android:layout_marginBottom="20dp"
         android:src="@drawable/getphone" />
+
+    <TextView
+        android:id="@+id/showMat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/showUsr"
+        android:layout_alignTop="@+id/showUsr"
+        android:layout_marginTop="16dp"
+        android:text="@string/space"
+        android:textColor="@color/Blanco" />
 
 </RelativeLayout>
