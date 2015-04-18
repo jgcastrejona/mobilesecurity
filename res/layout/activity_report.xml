@@ -2,6 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/AzulCl"
     tools:context="${relativePackage}.${activityClass}" >
 
     <TextView
@@ -11,7 +12,9 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="23dp"
-        android:text="@string/titleReporte" />
+        android:text="@string/titleReporte"
+        android:textColor="@color/Blanco"
+        android:textSize="20sp" />
 
     <EditText
         android:id="@+id/editableTitulo"
@@ -19,7 +22,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView1"
         android:layout_centerHorizontal="true"
-        android:ems="10" >
+        android:ems="10"
+        android:textColor="@color/Blanco" >
 
         <requestFocus />
     </EditText>
@@ -31,7 +35,9 @@
         android:layout_below="@+id/editableTitulo"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
-        android:text="@string/descReporte" />
+        android:text="@string/descReporte"
+        android:textColor="@color/Blanco"
+        android:textSize="20sp" />
 
     <EditText
         android:id="@+id/editText2"
@@ -39,7 +45,9 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/editableTitulo"
         android:layout_below="@+id/textView2"
-        android:ems="10" />
+        android:ems="10"
+        android:lines="@integer/lineaSMDR"
+        android:textColor="@color/Blanco" />
 
     <Button
         android:id="@+id/sendReporte"
@@ -48,7 +56,8 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="18dp"
-        android:text="@string/btnReporte" />
+        android:text="@string/btnReporte"
+        android:textColor="@color/Blanco" />
 
     <Spinner
         android:id="@+id/spinner1"
@@ -56,7 +65,9 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView5"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="28dp" />
+        android:layout_marginTop="28dp"
+        android:background="@drawable/spinnerbg"
+        android:paddingLeft="45dp" />
 
     <TextView
         android:id="@+id/textView5"
@@ -64,6 +75,8 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:text="@string/tipoReporte" />
+        android:text="@string/tipoReporte"
+        android:textColor="@color/Blanco"
+        android:textSize="20sp" />
 
 </RelativeLayout>

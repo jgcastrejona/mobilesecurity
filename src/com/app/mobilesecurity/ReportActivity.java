@@ -17,6 +17,7 @@ import android.text.Editable;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -39,6 +40,8 @@ public class ReportActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+	    //Remove title bar
+	    this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_report);
 		
 		
@@ -92,9 +95,10 @@ public class ReportActivity extends Activity {
 		final Spinner spinner1 = (Spinner)findViewById(R.id.spinner1);
 		List<String> list= new ArrayList<String>();
 		list.add("Robo/Asalto");
+		list.add("Vandalismo");
 		list.add("Incendio");		
-		list.add("Accidente peatonal");
 		list.add("Accidente vial");
+		list.add("Accidente peatonal");
 		list.add("Emergencia Médica");
 		list.add("Otro");
 

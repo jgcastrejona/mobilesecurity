@@ -2,6 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/NaranjaUAP"
     tools:context="${relativePackage}.${activityClass}" >
 
     <TextView
@@ -11,15 +12,30 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="52dp"
-        android:text="Bienvenido" />
+        android:text="Bienvenido"
+        android:textColor="@color/Blanco"
+        android:textSize="25sp" />
 
     <Button
         android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="96dp"
+        android:background="@color/AzulCl"
+        android:onClick="goReporte"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="@string/btnLevantar"
+        android:textColor="@color/Blanco" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:text="@string/btnLevantar" 
-        android:onClick="goReporte"/>
+        android:src="@drawable/getphone" />
 
 </RelativeLayout>
